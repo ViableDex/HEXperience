@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import { Play, Sparkles, Clock, Users, Shield, Cpu, Cloud, CheckCircle2, ChevronRight, ArrowRight, Activity, Flame, Lock, Layers } from 'lucide-react';
+import { Play, Sparkles, CheckCircle2, ChevronRight, Layers, ExternalLink } from 'lucide-react';
+import { SPRINT_TOLL_URL } from '../../constants/links';
 
-interface ExperienceCatalogSectionProps {
-  onLaunchSprintToll: (scenarioId?: string) => void;
-}
-
-export const ExperienceCatalogSection: React.FC<ExperienceCatalogSectionProps> = ({
-  onLaunchSprintToll
-}) => {
+export const ExperienceCatalogSection: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'live' | 'engineering' | 'security' | 'finops'>('all');
   const [activeRoadmapModal, setActiveRoadmapModal] = useState<any | null>(null);
 
@@ -211,16 +206,18 @@ export const ExperienceCatalogSection: React.FC<ExperienceCatalogSectionProps> =
                   </div>
                 </div>
 
-                {/* Primary CTA Button */}
+                {/* Primary CTA Link Button to Game */}
                 <div className="pt-4">
-                  <button
-                    onClick={() => onLaunchSprintToll()}
-                    className="group px-7 py-4 rounded-xl font-enterprise font-bold text-base text-white bg-gradient-to-r from-[#004831] via-[#006747] to-[#66BD29] hover:from-[#00573b] hover:to-[#78BE20] shadow-[0_0_30px_rgba(102,189,41,0.4)] transition-all flex items-center gap-3 cursor-pointer active:scale-98"
+                  <a
+                    href={SPRINT_TOLL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group px-7 py-4 rounded-xl font-enterprise font-bold text-base text-white bg-gradient-to-r from-[#004831] via-[#006747] to-[#66BD29] hover:from-[#00573b] hover:to-[#78BE20] shadow-[0_0_30px_rgba(102,189,41,0.4)] transition-all inline-flex items-center gap-3 cursor-pointer active:scale-98"
                   >
                     <Play className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" />
                     <span>Launch Sprint Toll</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
                 </div>
 
               </div>
@@ -231,7 +228,7 @@ export const ExperienceCatalogSection: React.FC<ExperienceCatalogSectionProps> =
                   <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-100">
                     Featured Scenario Missions
                   </span>
-                  <span className="text-xs font-mono text-[#66BD29]">Click to Launch</span>
+                  <span className="text-xs font-mono text-[#66BD29]">Launch Game</span>
                 </div>
 
                 <div className="space-y-2.5">
@@ -267,10 +264,12 @@ export const ExperienceCatalogSection: React.FC<ExperienceCatalogSectionProps> =
                       color: 'text-amber-300'
                     }
                   ].map((scenario) => (
-                    <div
+                    <a
                       key={scenario.id}
-                      onClick={() => onLaunchSprintToll(scenario.id)}
-                      className="p-3 rounded-xl bg-[#003624]/70 hover:bg-[#004831] border border-[#004831] hover:border-[#66BD29]/60 transition-all cursor-pointer flex items-center justify-between group"
+                      href={SPRINT_TOLL_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-xl bg-[#003624]/70 hover:bg-[#004831] border border-[#004831] hover:border-[#66BD29]/60 transition-all cursor-pointer flex items-center justify-between group block"
                     >
                       <div>
                         <div className={`text-xs font-mono font-bold ${scenario.color} group-hover:text-white transition-colors`}>
@@ -283,7 +282,7 @@ export const ExperienceCatalogSection: React.FC<ExperienceCatalogSectionProps> =
                       <div className="w-8 h-8 rounded-lg bg-[#00271a] group-hover:bg-[#66BD29] flex items-center justify-center text-emerald-300 group-hover:text-[#003624] transition-colors shrink-0">
                         <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
 
@@ -407,16 +406,17 @@ export const ExperienceCatalogSection: React.FC<ExperienceCatalogSectionProps> =
               >
                 Close
               </button>
-              <button
-                onClick={() => {
-                  setActiveRoadmapModal(null);
-                  onLaunchSprintToll();
-                }}
-                className="px-4 py-2 rounded-xl text-xs font-enterprise font-bold text-white bg-[#004831] hover:bg-[#006747] border border-[#66BD29] flex items-center gap-1.5"
+              <a
+                href={SPRINT_TOLL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setActiveRoadmapModal(null)}
+                className="px-4 py-2 rounded-xl text-xs font-enterprise font-bold text-white bg-[#004831] hover:bg-[#006747] border border-[#66BD29] inline-flex items-center gap-1.5"
               >
                 <Play className="w-3.5 h-3.5 fill-[#66BD29] text-[#66BD29]" />
                 <span>Launch Sprint Toll</span>
-              </button>
+                <ExternalLink className="w-3.5 h-3.5 text-[#66BD29]" />
+              </a>
             </div>
           </div>
         </div>

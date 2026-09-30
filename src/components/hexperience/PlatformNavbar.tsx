@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { HexLogo } from './HexLogo';
-import { Play, Menu, X, ArrowRight } from 'lucide-react';
+import { Play, Menu, X, ExternalLink } from 'lucide-react';
+import { SPRINT_TOLL_URL } from '../../constants/links';
 
-interface PlatformNavbarProps {
-  onLaunchSprintToll: () => void;
-}
-
-export const PlatformNavbar: React.FC<PlatformNavbarProps> = ({
-  onLaunchSprintToll
-}) => {
+export const PlatformNavbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -76,11 +71,13 @@ export const PlatformNavbar: React.FC<PlatformNavbarProps> = ({
             ))}
           </nav>
 
-          {/* Primary Launch CTA */}
+          {/* Primary Launch CTA - Links directly to Sprint Toll */}
           <div className="hidden sm:flex items-center gap-3">
-            <button
-              onClick={onLaunchSprintToll}
-              className="relative group overflow-hidden rounded-xl p-[1.5px] font-semibold text-sm cursor-pointer shadow-[0_0_25px_rgba(102,189,41,0.35)] hover:shadow-[0_0_35px_rgba(102,189,41,0.55)] transition-all"
+            <a
+              href={SPRINT_TOLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group overflow-hidden rounded-xl p-[1.5px] font-semibold text-sm cursor-pointer shadow-[0_0_25px_rgba(102,189,41,0.35)] hover:shadow-[0_0_35px_rgba(102,189,41,0.55)] transition-all inline-block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#004831] via-[#007A53] to-[#66BD29] transition-all duration-300 group-hover:scale-105" />
               <div className="relative px-4 py-2.5 bg-[#07150F] rounded-[10px] flex items-center gap-2 text-white group-hover:bg-[#00271a] transition-colors">
@@ -91,20 +88,22 @@ export const PlatformNavbar: React.FC<PlatformNavbarProps> = ({
                 <span className="text-xs px-1.5 py-0.5 rounded bg-[#004831]/80 text-[#66BD29] border border-[#66BD29]/40 font-mono">
                   Live
                 </span>
-                <ArrowRight className="w-4 h-4 text-[#66BD29] group-hover:translate-x-1 transition-transform" />
+                <ExternalLink className="w-3.5 h-3.5 text-[#66BD29] group-hover:translate-x-0.5 transition-transform" />
               </div>
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Trigger */}
           <div className="flex sm:hidden items-center gap-2">
-            <button
-              onClick={onLaunchSprintToll}
+            <a
+              href={SPRINT_TOLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-3 py-1.5 rounded-lg bg-[#004831] border border-[#66BD29] text-white text-xs font-semibold flex items-center gap-1 shadow-sm"
             >
               <Play className="w-3 h-3 fill-current text-[#66BD29]" />
               Sprint Toll
-            </button>
+            </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-emerald-200 hover:text-white rounded-lg hover:bg-[#003624]"
@@ -132,16 +131,17 @@ export const PlatformNavbar: React.FC<PlatformNavbarProps> = ({
           </div>
 
           <div className="pt-3 border-t border-[#004831] space-y-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onLaunchSprintToll();
-              }}
+            <a
+              href={SPRINT_TOLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3 px-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-[#004831] to-[#66BD29] shadow-[0_0_20px_rgba(102,189,41,0.35)] flex items-center justify-center gap-2"
             >
               <Play className="w-4 h-4 fill-white" />
-              Launch Featured Experience: Sprint Toll
-            </button>
+              <span>Launch Featured Experience: Sprint Toll</span>
+              <ExternalLink className="w-4 h-4 text-white" />
+            </a>
           </div>
         </div>
       )}

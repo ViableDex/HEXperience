@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import { HexLogo } from './HexLogo';
-import { ShieldCheck, Sparkles, Terminal, Heart, Send, Check } from 'lucide-react';
+import { Send, Check, ExternalLink } from 'lucide-react';
+import { SPRINT_TOLL_URL } from '../../constants/links';
 
-interface HexperienceFooterProps {
-  onLaunchSprintToll: () => void;
-}
-
-export const HexperienceFooter: React.FC<HexperienceFooterProps> = ({
-  onLaunchSprintToll
-}) => {
+export const HexperienceFooter: React.FC = () => {
   const [feedbackSent, setFeedbackSent] = useState(false);
   const [feedbackText, setFeedbackText] = useState('');
 
@@ -90,13 +85,16 @@ export const HexperienceFooter: React.FC<HexperienceFooterProps> = ({
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <button
-                  onClick={onLaunchSprintToll}
-                  className="hover:text-[#66BD29] transition-colors text-left flex items-center gap-1 cursor-pointer"
+                <a
+                  href={SPRINT_TOLL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#66BD29] transition-colors text-left flex items-center gap-1.5 cursor-pointer"
                 >
                   <span>Launch Sprint Toll</span>
                   <span className="px-1 text-[9px] rounded bg-[#004831] text-[#66BD29] border border-[#66BD29]/40">LIVE</span>
-                </button>
+                  <ExternalLink className="w-3 h-3 text-[#66BD29]" />
+                </a>
               </li>
               <li>
                 <a href="#catalog" className="hover:text-[#66BD29] transition-colors">
