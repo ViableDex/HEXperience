@@ -104,8 +104,8 @@ export const HexperienceFooter: React.FC = () => {
                   className="hover:text-[#66BD29] transition-colors text-left flex items-center gap-1.5 cursor-pointer"
                 >
                   <span>CyberFloor - Security Operations</span>
-                  <span className="px-1 text-[9px] rounded bg-[#004831] text-[#66BD29] border border-[#66BD29]/40">LIVE</span>
-                  <ExternalLink className="w-3 h-3 text-[#66BD29]" />
+                  <span className="px-1 text-[9px] rounded bg-amber-950/80 text-amber-300 border border-amber-500/40">BETA</span>
+                  <ExternalLink className="w-3 h-3 text-amber-400" />
                 </a>
               </li>
               <li>

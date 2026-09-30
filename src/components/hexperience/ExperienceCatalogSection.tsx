@@ -87,9 +87,9 @@ export const ExperienceCatalogSection: React.FC = () => {
           <div className="flex items-center gap-1.5 p-1.5 rounded-xl bg-[#00271a] border border-[#004831] overflow-x-auto shadow-sm max-w-full">
             {[
               { id: 'all', label: 'All Modules' },
-              { id: 'live', label: '⚡ Playable Now (2)' },
+              { id: 'live', label: '⚡ Playable Now (Live + Beta)' },
               { id: 'engineering', label: 'DevOps / SRE' },
-              { id: 'security', label: 'Cybersecurity' },
+              { id: 'security', label: 'Cybersecurity (Beta)' },
               { id: 'finops', label: 'Cloud FinOps' }
             ].map((tab) => (
               <button
@@ -274,20 +274,25 @@ export const ExperienceCatalogSection: React.FC = () => {
                 <div className="lg:col-span-7 space-y-6">
                   
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-gradient-to-r from-[#66BD29] to-[#4EA31B] text-[#003624] shadow-[0_0_15px_rgba(102,189,41,0.35)] flex items-center gap-1.5">
+                    <span className="px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 shadow-[0_0_15px_rgba(245,158,11,0.35)] flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5 fill-current" />
-                      Live Experience — Playable Now
+                      Beta Simulation — Playable Now
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-mono text-[#66BD29] bg-[#003624] border border-[#66BD29]/40 flex items-center gap-1.5">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[#66BD29]" />
-                      Enterprise Security Operations
+                    <span className="px-3 py-1 rounded-full text-xs font-mono text-amber-300 bg-amber-950/80 border border-amber-500/40 flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+                      Enterprise Security Operations (Beta)
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-3xl sm:text-4xl font-display-hex font-extrabold text-white">
-                      CyberFloor - Security Operations
-                    </h3>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="text-3xl sm:text-4xl font-display-hex font-extrabold text-white">
+                        CyberFloor - Security Operations
+                      </h3>
+                      <span className="px-2.5 py-0.5 rounded-md text-xs font-mono font-bold uppercase tracking-widest bg-amber-500/20 text-amber-300 border border-amber-500/50">
+                        Beta
+                      </span>
+                    </div>
                     <p className="mt-2 text-base sm:text-lg text-emerald-100/90 font-enterprise leading-relaxed">
                       A high-fidelity tactile SOC floor simulation where cyber defenders, engineers, and leadership triage live attack vectors, air-gap compromised network nodes, defuse credential harvesting, and master <strong>Zero-Trust architecture</strong> under active simulated breach conditions.
                     </p>
@@ -328,6 +333,9 @@ export const ExperienceCatalogSection: React.FC = () => {
                     >
                       <Play className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" />
                       <span>Launch CyberFloor - Security Operations</span>
+                      <span className="text-xs px-2 py-0.5 rounded bg-black/40 text-amber-300 border border-amber-500/40 font-mono">
+                        Beta
+                      </span>
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                     </a>
                   </div>
@@ -339,9 +347,9 @@ export const ExperienceCatalogSection: React.FC = () => {
                   <div className="flex items-center justify-between pb-3 border-b border-[#004831]">
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-100 flex items-center gap-2">
                       <Terminal className="w-4 h-4 text-[#66BD29]" />
-                      SecOps Incident Missions
+                      Beta Incident Missions
                     </span>
-                    <span className="text-xs font-mono text-[#66BD29]">Launch Game</span>
+                    <span className="text-xs font-mono text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/40">Beta Access</span>
                   </div>
 
                   <div className="space-y-2.5">
