@@ -65,7 +65,7 @@ export const LeadershipTelemetrySection: React.FC = () => {
     : heatmapData.filter((d) => d.code === selectedDept);
 
   return (
-    <section id="telemetry" className="relative py-24 bg-[#05100B] border-b border-[#004831]">
+    <section id="telemetry" className="relative py-24 bg-[#05100B] border-b border-[#004831] overflow-hidden">
       
       {/* Background Accent */}
       <div className="absolute top-1/2 left-1/4 w-[600px] h-[300px] bg-[#004831]/20 blur-[140px] pointer-events-none rounded-full" />

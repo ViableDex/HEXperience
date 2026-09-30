@@ -41,7 +41,7 @@ export const ProblemSection: React.FC = () => {
   const currentData = retentionData[selectedTimeframe] || retentionData[48];
 
   return (
-    <section id="problem" className="relative py-24 bg-[#071911] border-t border-b border-[#004831]">
+    <section id="problem" className="relative py-24 bg-[#071911] border-t border-b border-[#004831] overflow-hidden">
       {/* Background accents */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-rose-500/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#004831]/20 blur-[120px] pointer-events-none" />

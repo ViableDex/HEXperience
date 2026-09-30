@@ -64,7 +64,7 @@ export const PlatformPillarsSection: React.FC = () => {
   ];
 
   return (
-    <section id="pillars" className="relative py-24 bg-[#071911] border-b border-[#004831]">
+    <section id="pillars" className="relative py-24 bg-[#071911] border-b border-[#004831] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

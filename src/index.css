@@ -17,14 +17,27 @@
 
 html {
   font-size: 85%;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #2B2F38;
-  color: #1E222A;
+  background-color: #05100B;
+  color: #F4F7F5;
   user-select: none;
   -webkit-user-select: none;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
 }
 
 /* Heading styles */

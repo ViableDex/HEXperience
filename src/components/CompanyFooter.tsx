@@ -6,7 +6,7 @@ export const CompanyFooter: React.FC = () => {
 
   return (
     <>
-      <footer className="w-full mt-12 bg-[#004831] border-t-[3px] border-[#1E222A] text-white select-none relative shadow-[0_-4px_12px_rgba(0,0,0,0.25)]">
+      <footer className="w-full mt-12 bg-[#004831] border-t-[3px] border-[#1E222A] text-white select-none relative shadow-[0_-4px_12px_rgba(0,0,0,0.25)] overflow-hidden">
         {/* Decorative Industrial Rivets */}
         <div className="rivet top-3 left-4" />
         <div className="rivet top-3 right-4" />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { HexLogo } from './HexLogo';
 import { Send, Check, ExternalLink } from 'lucide-react';
-import { SPRINT_TOLL_URL } from '../../constants/links';
+import { SPRINT_TOLL_URL, CYBER_FLOOR_URL } from '../../constants/links';
 
 export const HexperienceFooter: React.FC = () => {
   const [feedbackSent, setFeedbackSent] = useState(false);
@@ -81,7 +81,7 @@ export const HexperienceFooter: React.FC = () => {
           {/* Featured Prototype Quick Links */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider">
-              Featured Simulation
+              Featured Simulations
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
@@ -91,7 +91,19 @@ export const HexperienceFooter: React.FC = () => {
                   rel="noopener noreferrer"
                   className="hover:text-[#66BD29] transition-colors text-left flex items-center gap-1.5 cursor-pointer"
                 >
-                  <span>Launch Sprint Toll</span>
+                  <span>Sprint Toll: Flow Simulator</span>
+                  <span className="px-1 text-[9px] rounded bg-[#004831] text-[#66BD29] border border-[#66BD29]/40">LIVE</span>
+                  <ExternalLink className="w-3 h-3 text-[#66BD29]" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={CYBER_FLOOR_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#66BD29] transition-colors text-left flex items-center gap-1.5 cursor-pointer"
+                >
+                  <span>CyberFloor - Security Operations</span>
                   <span className="px-1 text-[9px] rounded bg-[#004831] text-[#66BD29] border border-[#66BD29]/40">LIVE</span>
                   <ExternalLink className="w-3 h-3 text-[#66BD29]" />
                 </a>
@@ -103,12 +115,7 @@ export const HexperienceFooter: React.FC = () => {
               </li>
               <li>
                 <a href="#catalog" className="hover:text-[#66BD29] transition-colors">
-                  Story Slicing Scalpel
-                </a>
-              </li>
-              <li>
-                <a href="#catalog" className="hover:text-[#66BD29] transition-colors">
-                  E-ZPass Gate Automation
+                  SOC Triage &amp; Zero Trust
                 </a>
               </li>
             </ul>

@@ -17,11 +17,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#05100B] text-[#F4F7F5] flex flex-col font-sans selection:bg-[#66BD29] selection:text-[#003624]">
+    <div className="min-h-screen bg-[#05100B] text-[#F4F7F5] flex flex-col font-sans selection:bg-[#66BD29] selection:text-[#003624] overflow-x-hidden w-full max-w-full">
       {/* =========================================================================
           HEXPERIENCE ENTERPRISE PLATFORM SHOWCASE & CATALOG
           ========================================================================= */}
-      <div className="flex-1 flex flex-col bg-hex-matrix">
+      <div className="flex-1 flex flex-col bg-hex-matrix overflow-x-hidden w-full max-w-full">
         {/* Sticky Platform Navigation */}
         <PlatformNavbar />
 
