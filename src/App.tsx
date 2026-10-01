@@ -6,7 +6,6 @@ import { PlatformPillarsSection } from './components/hexperience/PlatformPillars
 import { ExperienceCatalogSection } from './components/hexperience/ExperienceCatalogSection';
 import { LeadershipTelemetrySection } from './components/hexperience/LeadershipTelemetrySection';
 import { HexperienceFooter } from './components/hexperience/HexperienceFooter';
-import { CompanyFooter } from './components/CompanyFooter';
 
 export default function App() {
   const handleScrollToCatalog = () => {
@@ -48,9 +47,6 @@ export default function App() {
 
         {/* Platform Footer */}
         <HexperienceFooter />
-
-        {/* Corporate Branding Footer */}
-        <CompanyFooter />
       </div>
     </div>
   );
