@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="hexDarkGradient" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#003624" />
+      <stop offset="1" stop-color="#05100B" />
+    </linearGradient>
+    <linearGradient id="hexGreenGradient" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#004831" />
+      <stop offset="0.5" stop-color="#007A53" />
+      <stop offset="1" stop-color="#66BD29" />
+    </linearGradient>
+    <linearGradient id="hexAccentFill" x1="24" y1="22" x2="76" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#004831" />
+      <stop offset="1" stop-color="#66BD29" />
+    </linearGradient>
+  </defs>
+  <!-- Outer Hexagon with gradient border -->
+  <polygon
+    points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5"
+    fill="url(#hexDarkGradient)"
+    stroke="url(#hexGreenGradient)"
+    stroke-width="5"
+    stroke-linejoin="round"
+  />
+  <!-- Inner Accent Hexagon -->
+  <polygon
+    points="50,22 76,36.5 76,63.5 50,78 24,63.5 24,36.5"
+    fill="url(#hexAccentFill)"
+    opacity="0.4"
+  />
+  <!-- Central Prismatic Core 'H' Lattice -->
+  <path
+    d="M36 32V68M64 32V68M36 50H64"
+    stroke="#66BD29"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+  <circle cx="50" cy="50" r="3" fill="#FFFFFF" />
+</svg>
